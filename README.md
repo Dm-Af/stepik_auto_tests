@@ -1,2 +1,3 @@
 # stepik_auto_tests_selenium
+Learning course of Selenium in Stepik-platform
 My testing of Selenium Web Driver...
