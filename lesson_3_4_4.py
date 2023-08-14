@@ -13,7 +13,10 @@ def browser():
     chrome_options.add_argument("--remote-debugging-port=9222")
     browser = webdriver.Chrome(options=chrome_options)
     # -------------------------------------------------------------------
-    return browser
+    yield browser
+    # этот код выполнится после завершения теста
+    print("\nquit browser..")
+    browser.quit()
 
 class TestMainPage1():
     # вызываем фикстуру в тесте, передав ее как параметр
@@ -24,5 +27,3 @@ class TestMainPage1():
     def test_guest_should_see_basket_link_on_the_main_page(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
-
-# browser.quit()
