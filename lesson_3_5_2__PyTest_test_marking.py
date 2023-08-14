@@ -29,3 +29,9 @@ class TestMainPage1():
     def test_guest_should_see_basket_link_on_the_main_page(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+
+# @pytest.mark.smoke и @pytest.mark.regression - декораторы, которые создают маркировку "mark" тестов,
+# чтобы их можно было бы вызывать из консоли обособленно. Например, такой командой:
+# pytest -svm smoke lesson_3_5_2__PyTest_test_marking.py
+# за выбор теста по марке отвечает параметр -m
+# чтобы не выходило предупреждение о незарегистрированной марке, нужно их добавить в pytest.ini
