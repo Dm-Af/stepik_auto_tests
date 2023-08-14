@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import os
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
-file_path = os.path.join(current_dir, 'txt_file_for_send.txt')
+file_path = os.path.join(current_dir, '../txt_file_for_send.txt')
 link = "http://suninjuly.github.io/file_input.html"
 try:
     #---------UBUNTU 22.04 - PyCharm - Don't work without this!---------
