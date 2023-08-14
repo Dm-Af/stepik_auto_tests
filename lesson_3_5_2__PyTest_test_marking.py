@@ -37,6 +37,9 @@ class TestMainPage1():
 # или, наоборот, запустить все тесты, кроме маркированного:
 # pytest -svm "not smoke" lesson_3_5_2__PyTest_test_marking.py
 #
+# Можно запустить несколько маркированных тестов:
+# pytest -svm "smoke or regression" lesson_3_5_2__PyTest_test_marking.py
+#
 # за выбор теста по марке отвечает параметр -m
 # чтобы не выходило предупреждение о незарегистрированной марке, нужно их добавить в pytest.ini
 #
