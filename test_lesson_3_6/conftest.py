@@ -16,6 +16,7 @@ def browser():
     chrome_options.add_argument("--remote-debugging-port=9222")
     browser = webdriver.Chrome(options=chrome_options)
     # -------------------------------------------------------------------
+    browser.implicitly_wait(5) # ожидаю максимум 5 сек для каждого элемента
     yield browser
     print("\nquit browser..")
     browser.quit()
