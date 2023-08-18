@@ -6,6 +6,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import json
 
 @pytest.fixture(scope="function")
 def browser():
@@ -18,3 +19,9 @@ def browser():
     yield browser
     print("\nquit browser..")
     browser.quit()
+
+@pytest.fixture(scope="function")
+def login_pass():
+    with open('../my_login.json', 'r', encoding='utf-8') as file:
+        my_login = json.load(file)
+    return my_login
